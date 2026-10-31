@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#f8e8e8">
+<title>Every Song Has a Story ❤️</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Sacramento&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="config.js"></script>
+</head>
+<body>
+<div class="ambient" aria-hidden="true"><span>♡</span><span>✦</span><span>♡</span><span>✧</span><span>♡</span><span>✦</span></div>
+<section id="welcome" class="welcome screen">
+  <div class="welcome-glow"></div><div class="envelope-wrap"><div class="envelope">💌</div><div class="orbit orbit-one">♡</div><div class="orbit orbit-two">✦</div></div>
+  <p class="eyebrow">A LITTLE SURPRISE, MADE WITH LOVE</p>
+  <h1>I hope this will always be<br><em>your favourite playlist</em><br>from now on.</h1>
+  <p class="welcome-sub">Because these aren't just songs… each one holds a little piece of my heart.</p>
+  <button id="openPlaylist" class="primary-btn">Open Your Playlist <span>♥</span></button>
+  <div class="tiny-note">made with love, just for you</div>
+</section>
+<main id="playlistPage" class="hidden">
+  <header class="topbar"><a class="brand" href="#top">♡ <span>our little soundtrack</span></a><button id="adminToggle" class="text-btn hidden">Admin</button></header>
+  <section id="top" class="intro section-wrap">
+    <p class="eyebrow">A COLLECTION OF LITTLE FEELINGS</p><h2>Every Song Has<br><em>a Story.</em></h2>
+    <p>Some feelings are difficult to explain in words. So I collected them in songs, memories, and little pieces of my heart.</p>
+    <div class="listen-line">Listen closely… maybe you'll find yourself in every melody. <span>♡</span></div>
+    <div class="progress-wrap"><div class="progress-label"><span>OUR LITTLE PLAYLIST</span><strong id="songCount">0 songs</strong></div><div class="progress-track"><div id="progressBar"></div></div></div>
+  </section>
+  <section id="songs" class="songs section-wrap"></section>
+  <section class="ending section-wrap"><div class="ending-heart">♡</div><p class="eyebrow">AND BEFORE YOU GO…</p><h2>And that's the thing<br>about <em>you…</em></h2>
+    <p>You became a part of so many little moments in my life. Now, even the songs I listen to remind me of you. Maybe someday, when these songs play again, you'll remember that someone once collected melodies just to tell you how special you are.</p>
+    <h3>One playlist. Many songs. Countless feelings.<br>All leading back to you. <span>❤️</span></h3><div class="signature">With love, always.</div>
+  </section>
+  <footer>made of melodies & memories <span>♡</span></footer>
+</main>
+<div id="adminPanel" class="admin-panel hidden" aria-live="polite">
+ <div class="admin-head"><div><p class="eyebrow">YOUR PRIVATE CORNER</p><h2>Playlist studio</h2></div><button id="closeAdmin" class="icon-btn" aria-label="Close">×</button></div>
+ <div id="loginBox"><p class="muted">Sign in with the admin account you create in Supabase.</p><label>Email<input id="adminEmail" type="email" autocomplete="username" placeholder="you@example.com"></label><label>Password<input id="adminPassword" type="password" autocomplete="current-password" placeholder="Your password"></label><button id="loginBtn" class="primary-btn full">Sign in</button><p id="loginMessage" class="status"></p></div>
+ <div id="editorBox" class="hidden"><div class="editor-toolbar"><span id="saveStatus" class="status">Draft not loaded</span><button id="addSong" class="secondary-btn">＋ Add a song</button></div><div id="editorList"></div><div class="publish-row"><button id="saveDraft" class="secondary-btn">Save draft</button><button id="publishBtn" class="primary-btn">Publish playlist ♥</button></div><button id="logoutBtn" class="text-btn">Sign out</button><p class="small-help">Save draft keeps your private changes. Publish makes the latest draft visible to anyone with your link.</p></div>
+</div><div id="toast" class="toast" role="status"></div>
+<script src="app.js"></script>
+</body></html>
